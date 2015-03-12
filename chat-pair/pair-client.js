@@ -4,7 +4,7 @@ function PairClient() {
   // NOTE(smus): I am no longer running the borismus-pair-ws nodejitsu
   // instance, so to run this demo, you will need to clone the repository
   // and run your own server locally.
-  this.socket = new WebSocket('ws://localhost:8080');
+  this.socket = new WebSocket('ws://192.168.0.4:8080'); //Change for fit the caa's env
   //this.socket = new WebSocket('ws://borismus-pair-ws.nodejitsu.com:80');
   this.socket.onmessage = this.onMessage_.bind(this);
   this.socket.onerror = this.onError_.bind(this);

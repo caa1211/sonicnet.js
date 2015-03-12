@@ -1,8 +1,8 @@
 function PairServer() {
   this.conn_id = null;
   // Create a websocket connection to the server.
-  //this.socket = new WebSocket('ws://localhost:8080');
-  this.socket = new WebSocket('ws://borismus-pair-ws.nodejitsu.com:80');
+  this.socket = new WebSocket('ws://localhost:8080');
+  //this.socket = new WebSocket('ws://borismus-pair-ws.nodejitsu.com:80');
   this.socket.onmessage = this.onMessage_.bind(this);
   this.socket.onerror = this.onError_.bind(this);
 }
